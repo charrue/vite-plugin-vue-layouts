@@ -1,12 +1,12 @@
-# vite-plugin-vue-layouts
+# @charrue/vite-plugin-vue-layouts
 
-[![npm version](https://img.shields.io/npm/v/vite-plugin-vue-layouts)](https://www.npmjs.com/package/vite-plugin-vue-layouts)
+[![npm version](https://img.shields.io/npm/v/@charrue/vite-plugin-vue-layouts)](https://www.npmjs.com/package/@charrue/vite-plugin-vue-layouts)
 
 > Router based layout for Vue 3 applications using [Vite](https://github.com/vitejs/vite)
 
 ## Overview
 
-This works best along with the [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages).
+This works best along with the [vite-plugin-pages](https://github.com/charrue/vite-plugin-pages).
 
 Layouts are stored in the `/src/layouts` folder by default and are standard Vue components with a `<router-view></router-view>` in the template.
 
@@ -29,7 +29,7 @@ meta:
 Install Layouts:
 
 ```bash
-$ npm install -D vite-plugin-vue-layouts
+$ npm install -D @charrue/vite-plugin-vue-layouts
 ```
 
 Add to your `vite.config.js`:
@@ -37,7 +37,7 @@ Add to your `vite.config.js`:
 ```js
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
-import Layouts from 'vite-plugin-vue-layouts';
+import Layouts from '@charrue/vite-plugin-vue-layouts';
 
 export default {
   plugins: [Vue(), Pages(), Layouts()],
@@ -60,11 +60,11 @@ const router = createRouter({
 ```
 
 ## Client Types
-If you want type definition of `virtual:generated-layouts`, add `vite-plugin-vue-layouts/client` to `compilerOptions.types` of your `tsconfig`:
+If you want type definition of `virtual:generated-layouts`, add `@charrue/vite-plugin-vue-layouts/client` to `compilerOptions.types` of your `tsconfig`:
 ```json
 {
   "compilerOptions": {
-    "types": ["vite-plugin-vue-layouts/client"]
+    "types": ["@charrue/vite-plugin-vue-layouts/client"]
   }
 }
 ```
@@ -85,7 +85,7 @@ To use custom configuration, pass your options to Layouts when instantiating the
 
 ```js
 // vite.config.js
-import Layouts from 'vite-plugin-vue-layouts';
+import Layouts from '@charrue/vite-plugin-vue-layouts';
 
 export default {
   plugins: [
@@ -162,7 +162,7 @@ If you want to send data *down* from the layout to the page, use props
 
 If you want to set state in your page and do something with it in your layout, add additional properties to a route's `meta` property. Doing so only works if you know the state at build-time.
 
-You can use the `<route>` block if you work with [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages).
+You can use the `<route>` block if you work with [vite-plugin-pages](https://github.com/charrue/vite-plugin-pages).
 
 In `page.vue`:
 ```html

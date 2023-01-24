@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
+import Layouts from '@charrue/vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
 
 const config = defineConfig({
@@ -14,7 +14,7 @@ const config = defineConfig({
       syncIndex: false,
     }),
     Layouts({
-      defaultLayout: 'default'
+      defaultLayout: 'default',
     }),
     Markdown(),
   ],

@@ -20,7 +20,7 @@
     "vite": "^2.8.6",
     "vite-plugin-md": "^0.6.7",
     "vite-plugin-pages": "0.12.1",
-    "vite-plugin-vue-layouts": "workspace:*",
+    "@charrue/vite-plugin-vue-layouts": "workspace:*",
     "vite-ssg": "^0.10.1"
   }
 }
